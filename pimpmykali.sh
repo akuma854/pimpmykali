@@ -247,7 +247,7 @@ apt_fixbroken() {
 
 
 fix_missing() {
-    fix_kali_lightdm_theme_and_background
+    #fix_kali_lightdm_theme_and_background
     fix_sources 
     setup_binfmt_mount
     fix_hushlogin
@@ -379,14 +379,14 @@ fix_dockercompose() {
     }
 
 
-fix_kali_lightdm_theme_and_background () {
-    APP="sed"
-    FUNCTYPE="update lightdm-gtk-greeter.conf"
-    sed s:"Kali-Light":"Kali-Dark":g -i /etc/lightdm/lightdm-gtk-greeter.conf
-    EXIT_STATUS="$?"
-    check_exit_status ${APP} ${FUNCTYPE} ${EXIT_STATUS}
-    clean_vars
-    }
+#fix_kali_lightdm_theme_and_background () {
+    #APP="sed"
+    #FUNCTYPE="update lightdm-gtk-greeter.conf"
+    #sed s:"Kali-Light":"Kali-Dark":g -i /etc/lightdm/lightdm-gtk-greeter.conf
+    #EXIT_STATUS="$?"
+    #check_exit_status ${APP} ${FUNCTYPE} ${EXIT_STATUS}
+    #clean_vars
+    #}
 
 
 install_rustup() {
